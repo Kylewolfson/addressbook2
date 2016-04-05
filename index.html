@@ -12,7 +12,7 @@
       <h1>Address book</h1>
 
       <div class="row">
-        
+
         <div class="col-md-6">
           <h2>Add a contact:</h2>
           <form id="new-contact">
@@ -26,7 +26,17 @@
             </div>
 
             <div id="new-addresses">
-              <div class="new-address">
+              <div class="new-address" id="originalAddress">
+                <!-- Address type chooser -->
+                <div class="form-group">
+                 <label for="address-type">Address type:</label>
+                 <select class="form-control address-type">
+                   <option disabled selected value> -- select an option -- </option>
+                   <option value=H>Home</option>
+                   <option value=W>Work</option>
+                   <option value=O>Other</option>
+                 </select>
+               </div>
                 <div class="form-group">
                   <label for="new-street">Street</label>
                   <input type="text" class="form-control new-street">
@@ -39,6 +49,7 @@
                   <label for="new-state">State</label>
                   <input type="text" class="form-control new-state">
                 </div>
+
               </div>
             </div>
 

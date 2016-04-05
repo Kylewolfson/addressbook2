@@ -69,6 +69,8 @@ $(document).ready(function() {
       });
     });
 
+    $(".new-address").not("#originalAddress").remove();
+
     // Blanks the fields
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
