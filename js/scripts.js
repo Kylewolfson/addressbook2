@@ -61,9 +61,7 @@ $(document).ready(function() {
     // Collects and uses the inputted address data
     $(".new-address").each(function() {
       var inputtedKind = $(this).find("select.new-kind").val();
-      console.log(inputtedKind);
       var inputtedStreet = $(this).find("input.new-street").val();
-      console.log(inputtedStreet);
       var inputtedCity = $(this).find("input.new-city").val();
       var inputtedState = $(this).find("input.new-state").val();
       var newAddress = new Address(inputtedKind, inputtedStreet, inputtedCity, inputtedState);
@@ -88,7 +86,7 @@ $(document).ready(function() {
     // Blanks the fields
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
-      // Do we need to re-set the dropdown?
+    $("select.new-kind").val(0);  // Do we need to re-set the dropdown?
     $("input.new-street").val("");
     $("input.new-city").val("");
     $("input.new-state").val("");
